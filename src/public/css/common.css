@@ -1,0 +1,16 @@
+.header {
+    margin: 0;
+    max-width: 1230px;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.header__item-logo {
+    text-align: center;
+    font-size: 30px;
+    color: #634B42;
+}
