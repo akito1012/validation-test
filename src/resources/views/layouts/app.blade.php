@@ -12,11 +12,12 @@
 <body>
     <header class="header">
         <div class="header__inner">
-            <div class="header__item">
+            <div class="header__inner-arrangement">            <div class="header__item">
                 <h1 class="header__item-logo">FashionablyLate</h1>
-            </div>
-            <div class="header__button">
-                @yield('button')
+                </div>
+                <div class="header__button">
+                    @yield('button')
+                </div>
             </div>
         </div>
     </header>

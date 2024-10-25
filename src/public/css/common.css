@@ -1,16 +1,30 @@
 .header {
     margin: 0;
-    max-width: 1230px;
 }
 
-.header__inner {
+.header__inner{
     margin: 0 auto;
     padding: 0 20px;
-    width: 100%;
+    max-width: 1230px;
+    text-align: center;
 }
 
+.header__inner-arrangement{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+}
 .header__item-logo {
-    text-align: center;
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
     font-size: 30px;
     color: #634B42;
+}
+
+.header__button{
+    position: absolute;
+    margin-left: auto;
 }

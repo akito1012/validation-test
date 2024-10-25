@@ -55,18 +55,48 @@
 .input__gender{
     width: 24px;
     height: 24px;
-    background: #FFFFFF;
-    border: solid 2px #634B42;
     border-radius: 50px;
     box-shadow: 0 0 0 0 transparent;
     color: #634B42;
-    accent-color: #634B42;
 }
 .label-color{
     font-size: 24px;
     color: #634B42;
 }
-
-.input__email{
+.input__tel{
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #e8e8e8;
+    border: none;
+}
+.input__email,
+.input__address,
+.input__building,
+.inquiryKinds
+{
     width: 100%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    background-color: #e8e8e8;
+    border: none;
+}
+.inquiry-item{
+    width: 100%;
+    margin: 0 auto;
+    padding: auto;
+    background-color: #e8e8e8;
+    border: none;
+}
+.confirmation__button{
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+.confirmation__button-submit{
+    padding: 5px 15px;
+    color: #FFF;
+    background-color: #634B42;
+}
+.form__error{
+    color: red;
 }

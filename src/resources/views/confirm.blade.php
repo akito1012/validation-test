@@ -11,45 +11,71 @@
         <span class="confirm__header-span">confirm</span>
     </div>
     <table class="confirm-table">
+    <form >
+    <form action="/" method="post">
+        @csrf
         <div class="confirm-table__inner">
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">お名前</th>
-                <td class="confirm-table__item">山田　太郎</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="name" value="{{ $connect['lust_name', ' ', 'first_name'] }}" readonly/>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">性別</th>
-                <td class="confirm-table__item">男性</td>
+                <td class="confirm-table__item">
+                    <input type="hidden" name="gender" value="{{ $connect['gender'] }}" readonly />
+                    <?php
+                        if ($connect['gender'] == '1') {echo '男性';}
+                        else if ($connect['gender'] == '2') {echo '女性';}
+                        else{echo 'その他';}
+                    ?>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">メールアドレス</th>
-                <td class="confirm-table__item">test@example.com</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="email" value="{{ $connect['email'] }}" readonly/>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">電話番号</th>
-                <td class="confirm-table__item">08012345678</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="tel" value="{{ $connect['tel'] }}" readonly/>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">住所</th>
-                <td class="confirm-table__item">東京都渋谷区千駄ヶ谷1-2-3</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="address" value="{{ $connect['address'] }}" readonly/>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">建物名</th>
-                <td class="confirm-table__item">千駄ヶ谷マンション101</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="building" value="{{ $connect['building'] }}" readonly/>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">お問い合わせの種類</th>
-                <td class="confirm-table__item">商品の交換について</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="category" value="{{ $connect['content'] }}" readonly/>
+                </td>
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">お問い合わせ内容</th>
-                <td class="confirm-table__item">届いた商品が注文した商品ではありませんでした。<br>商品の取り換え願いします</td>
+                <td class="confirm-table__item">
+                    <input type="text" name="detail" value="{{ $connect['detail'] }}" readonly/>
+                </td>
             </tr>
         </div>
     </table>
     <div class="confirm-button">
-        <form class="confirm-button__form">
-            <button class="confirm-button__send">送信</button>
-            <button class="confirm-button__fix">修正</button>
-        </form>
+        <button class="confirm-button__send-submit" type="submit">送信</button>
+    </form>
+    <form class="confirm-button__fix" action="/" method="post">
+    @csrf
+        <button class="confirm-button__fix-submit" type="submit">修正</button>
+    </form>
     </div>
 </div>

@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ContactController;
-
+use App\Http\Controllers\ConnectsController;
+use App\Http\Controllers\AccountsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', [ContactController::class, 'index']);
+Route::get('/',[ContentsController::class, 'index']);
+
+Route::get('/',[ConnectsController::class, 'index']);
+Route::post('/confirm',[ConnectsController::class, 'confirm']);
+Route::post('/',[ConnectsController::class, 'store']);
+
+Route::get('/register',[AccountsController::class, 'index']);
+
+
+

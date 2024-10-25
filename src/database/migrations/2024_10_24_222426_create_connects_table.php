@@ -18,15 +18,14 @@ class CreateConnectsTable extends Migration
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->string('first_name');
             $table->string('last_name');
-            $table->integer('gender');
+            $table->tinyInteger('gender')->unsigned()->comment('性別 1:男、2:女、3:その他');
             $table->string('email');
-            $table->string('tell');
+            $table->string('tel');
             $table->string('address');
-            $table->string('building')->nullable;
+            $table->string('building')->nullable();
             $table->text('detail');
-            $table->timestamp('updated_at')->useCurrent()->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
-            $table->timestamps();
+            $table->timestamp('updated_at')->useCurrent()->nullable();
         });
     }
 
