@@ -5,3 +5,8 @@ Dockerビルド
 ２．docker-compose up -d -build
 Laravel環境構築
 すいません、時間がなく分かりませんでした。作ったファイルやコマンドをすべて記述するってことですか？
+使用技術
+
+URL
+・開発環境 ： http://localhost/
+・phpMyAdmin : http://localhost:8080/
